@@ -15,7 +15,7 @@ const Product = ({ productId: productIdProp }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   const { addToCart } = useContext(ShopContext)
 
-  // toast state
+  
   const [toast, setToast] = useState({ show: false, message: '' })
 
   const handleAddToCart = () => {
@@ -45,9 +45,9 @@ const Product = ({ productId: productIdProp }) => {
     <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
       <div className="flex flex-col lg:flex-row gap-12">
         
-        {/* ---------- Left: Product Images ---------- */}
+       
         <div className="flex-1 flex gap-5">
-          {/* Thumbnails */}
+         
           <div className="hidden sm:flex flex-col gap-3 w-24">
             {productData.image.map((item, index) => (
               <img
@@ -64,7 +64,7 @@ const Product = ({ productId: productIdProp }) => {
             ))}
           </div>
 
-          {/* Main Image */}
+         
           <div className="flex-1">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <img
@@ -76,13 +76,13 @@ const Product = ({ productId: productIdProp }) => {
           </div>
         </div>
 
-        {/* ---------- Right: Product Details ---------- */}
+        
         <div className="flex-1 space-y-6">
           <h1 className="font-extrabold text-3xl sm:text-5xl bg-gradient-to-r from-black via-gray-700 to-black bg-clip-text text-transparent">
             {productData.name}
           </h1>
 
-          {/* ⭐ Ratings */}
+          
           <div className="flex items-center gap-1">
             {[...Array(4)].map((_, i) => (
               <img key={i} src={assets.star_icon} alt="" className="w-5" />
@@ -91,7 +91,7 @@ const Product = ({ productId: productIdProp }) => {
             <p className="pl-2 text-gray-600 text-sm">(122 reviews)</p>
           </div>
 
-          {/* Price */}
+         
           <p className="text-3xl font-bold text-green-600">
             {Intl.NumberFormat("en-US", {
               style: "currency",
@@ -99,7 +99,7 @@ const Product = ({ productId: productIdProp }) => {
             }).format(productData.price)}
           </p>
 
-          {/* Sizes */}
+         
           {productData.sizes && (
             <div>
               <p className="mb-3 font-medium text-lg">Select Size:</p>
@@ -121,12 +121,12 @@ const Product = ({ productId: productIdProp }) => {
             </div>
           )}
 
-          {/* Add to Cart */}
+        
           <button onClick={handleAddToCart} className="px-8 py-3 bg-gradient-to-r from-black to-gray-800 text-white rounded-xl hover:opacity-90 transition-transform transform hover:scale-105 shadow-lg">
             🛒 Add to Cart
           </button>
 
-          {/* Toast */}
+         
           {toast.show && (
             <div className="fixed left-1/2 transform -translate-x-1/2 top-6 z-50">
               <div className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg">
@@ -135,14 +135,14 @@ const Product = ({ productId: productIdProp }) => {
             </div>
           )}
 
-          {/* Description + Features Card */}
+        
           <div className="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow-lg mt-8 space-y-4">
             <h2 className="text-xl font-bold text-gray-800">About this item</h2>
             <p className="text-gray-700 text-sm leading-relaxed">
               {productData.description || "No description available."}
             </p>
 
-            {/* Features */}
+          
             <div className="grid grid-cols-2 gap-4 text-sm mt-4">
               <p className="flex items-center gap-2">✅ Cash on Delivery</p>
               <p className="flex items-center gap-2">🔄 7 Days Return Policy</p>

@@ -9,13 +9,13 @@ const ShopContextProvider = (props) => {
   const currency = "$";
   const delivery_fee = 10;
 
-  // ✅ cart state
+  
   const [cart, setCart] = useState([]);
 
-  // ✅ orders state (jitne orders place honge yahan store honge)
+ 
   const [orders, setOrders] = useState([]);
 
-  // ---- Cart functions ----
+ 
   const addToCart = (productId, size = null, quantity = 1) => {
     setCart((prev) => {
       const idx = prev.findIndex(
@@ -45,24 +45,24 @@ const ShopContextProvider = (props) => {
     });
   };
 
-  // ---- Place Order function ----
+ 
   const placeOrder = (orderData) => {
     const newOrder = {
-      id: Date.now().toString(), // unique order id
+      id: Date.now().toString(), 
       date: new Date().toISOString(),
       status: "Processing",
       ...orderData,
     };
-    console.log("Placing order:", newOrder); // Debugging log
+    console.log("Placing order:", newOrder); 
     setOrders((prev) => {
       const updatedOrders = [...prev, newOrder];
-      console.log("Updated orders:", updatedOrders); // Debugging log
+      console.log("Updated orders:", updatedOrders); 
       return updatedOrders;
     });
-    setCart([]); // ✅ order hone ke baad cart empty
+    setCart([]); 
   };
 
-  // ---- LocalStorage (refresh par bhi orders/cart safe rahe) ----
+  
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
     const savedOrders = localStorage.getItem("orders");
@@ -83,10 +83,10 @@ const ShopContextProvider = (props) => {
     currency,
     delivery_fee,
     cart,
-    orders,       // ✅ orders context me available
+    orders,       
     addToCart,
     removeFromCart,
-    placeOrder,   // ✅ placeOrder function available
+    placeOrder,   
   };
 
   return (

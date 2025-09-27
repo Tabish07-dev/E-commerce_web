@@ -10,18 +10,18 @@ const ProductItem = ({ id, image, name, price }) => {
 
   return (
     <Link
-      href={`/product/${id}`}   // ✅ Next.js Link
+      href={`/product/${id}`}   
       className="text-gray-700 cursor-pointer"
     >
       <div className="overflow-hidden">
-        {/* ✅ Next.js Image Optimization */}
+       
         <Image
-          src={image[0]}         // first image
+          src={image[0]}        
           alt={name}
           width={300}
           height={300}
           className="hover:scale-110 transition ease-in-out object-contain"
-          // clicking image will follow the Link as before
+       
         />
       </div>
 

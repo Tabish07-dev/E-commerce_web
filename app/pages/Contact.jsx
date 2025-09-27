@@ -15,11 +15,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-indigo-100 flex items-center justify-center px-6 py-20">
       <div className="max-w-5xl w-full bg-white rounded-3xl shadow-2xl p-10 md:p-14 space-y-12 border border-gray-200 relative overflow-hidden">
-        {/* Decorative background */}
+        
         <div className="absolute top-0 left-0 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-40 -z-10"></div>
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-indigo-300 rounded-full blur-3xl opacity-40 -z-10"></div>
 
-        {/* Header */}
+     
         <div className="text-center space-y-3">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight">
             Let’s <span className="text-indigo-600">Connect</span>
@@ -29,9 +29,9 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Info & Form */}
+       
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Info Left */}
+         
           <div className="space-y-6">
             <div className="flex items-center gap-4 group">
               <Mail className="w-6 h-6 text-indigo-600 group-hover:scale-110 transition-transform" />
@@ -46,7 +46,7 @@ const Contact = () => {
               <span className="text-gray-700 text-lg">Dadu, Pakistan</span>
             </div>
 
-            {/* Social Links */}
+           
             <div className="flex gap-6 pt-4">
               <a
                 href="https://linkedin.com"
@@ -73,7 +73,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+       
           <form className="space-y-5">
             <input
               type="text"
@@ -103,7 +103,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Disclaimer */}
+        
         <div className="text-center border-t pt-6 text-sm text-gray-500 leading-relaxed">
           <p>
             ⚠️ This is a{" "}

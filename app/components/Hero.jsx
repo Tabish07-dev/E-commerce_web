@@ -6,7 +6,7 @@ import { assets } from '../assets/assets';
 const Hero = () => {
   return (
     <div className="flex flex-col sm:flex-row border border-gray-400 min-h-[500px] my-10">
-      {/* Left Side */}
+     
       <div className="w-full sm:w-1/2 flex items-center justify-center p-10">
         <div className="text-[#414141] space-y-4">
           <div className="flex items-center gap-2">
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right Side Image */}
+      
       <div className="w-full sm:w-1/2 flex items-center justify-center">
         <img
           src={assets.hero_img.src}

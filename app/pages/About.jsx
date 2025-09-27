@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import React from "react";
 import { Star, Target, HeartHandshake } from "lucide-react";
-import { assets } from "../assets/assets"; // ✅ make sure about_img.png export hua hai
+import { assets } from "../assets/assets"; 
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
-      {/* Hero Section */}
+     
       <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
           <Image
             src={assets.about_img}
@@ -29,7 +29,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* About Section */}
+   
       <section className="py-16 px-6 sm:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">About Us</h2>
@@ -41,7 +41,7 @@ const About = () => {
                 should be simple yet everlasting.
               </p>
 
-              {/* Personal completion note (display only) */}
+              
               <div className="mt-8 bg-white/60 rounded-lg p-6 inline-block">
                 <p className="text-gray-700">
                   I completed this frontend project myself and included a certificate as evidence.
@@ -56,7 +56,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Mission */}
+     
       <section className="bg-white py-16 px-6 sm:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>

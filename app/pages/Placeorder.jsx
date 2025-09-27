@@ -48,7 +48,7 @@ const PlaceOrder = () => {
       return;
     }
 
-    // ✅ Save order in context
+    
     placeOrder({
       customer: formData,
       paymentMethod,
@@ -72,7 +72,7 @@ const PlaceOrder = () => {
       </h2>
 
       <div className="grid md:grid-cols-3 gap-10">
-        {/* Address Form */}
+        
         <div className="md:col-span-2 bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-100">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
             <MapPin className="w-6 h-6 text-indigo-600" /> Delivery Address
@@ -87,7 +87,7 @@ const PlaceOrder = () => {
             <input type="text" name="country" value={formData.country} onChange={handleChange} placeholder="Country" className="p-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none col-span-2" />
           </div>
 
-          {/* Payment Methods */}
+          
           <div className="mt-10">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
               <Wallet className="w-6 h-6 text-indigo-600" /> Payment Method
@@ -128,7 +128,7 @@ const PlaceOrder = () => {
           </button>
         </div>
 
-        {/* Order Summary */}
+       
         <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-200 h-fit">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
             <CreditCard className="w-6 h-6 text-indigo-600" /> Order Summary

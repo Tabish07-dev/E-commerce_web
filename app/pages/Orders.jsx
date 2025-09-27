@@ -36,7 +36,7 @@ const OrdersPage = () => {
             key={order.id}
             className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200 p-6"
           >
-            {/* Order Header */}
+           
             <div className="flex flex-wrap justify-between items-center mb-6">
               <div>
                 <p className="text-sm text-gray-500">Order ID: {order.id}</p>
@@ -56,7 +56,7 @@ const OrdersPage = () => {
               </div>
             </div>
 
-            {/* Items */}
+            
             <div className="space-y-4 border-t pt-4">
               {order.items.map((item, idx) => (
                 <div
@@ -84,7 +84,7 @@ const OrdersPage = () => {
               ))}
             </div>
 
-            {/* Tracking */}
+            
             <div className="mt-6">
               <h4 className="text-lg font-semibold text-gray-800 mb-4">Order Status</h4>
               <div className="flex items-center justify-between">

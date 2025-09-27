@@ -19,21 +19,21 @@ const Collection = () => {
   useEffect(() => {
     let filtered = Array.isArray(products) ? [...products] : []
 
-    // Category filter
+    
     if (selectedCategories.length > 0) {
       filtered = filtered.filter(item =>
         selectedCategories.includes(item.category)
       )
     }
 
-    // Type filter
+  
     if (selectedTypes.length > 0) {
       filtered = filtered.filter(item =>
         selectedTypes.includes(item.subCategory || item.type)
       )
     }
 
-    // Search
+   
     if (searchQuery && searchQuery.trim() !== '') {
       const q = searchQuery.toLowerCase()
       filtered = filtered.filter(item =>
@@ -41,12 +41,12 @@ const Collection = () => {
       )
     }
 
-    // Price range
+    
     if (Array.isArray(priceRange) && priceRange.length === 2) {
       filtered = filtered.filter(item => item.price <= priceRange[1])
     }
 
-    // Sorting
+    
     if (sortOption === 'low-high') {
       filtered.sort((a, b) => a.price - b.price)
     } else if (sortOption === 'high-low') {

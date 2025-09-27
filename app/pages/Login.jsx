@@ -18,7 +18,7 @@ const Login = () => {
         onSubmit={submithandler}
         className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 space-y-6 border border-gray-100"
       >
-        {/* Header */}
+        
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800">
             {currentState === "login" ? "Welcome Back 👋" : "Create Account ✨"}
@@ -30,7 +30,7 @@ const Login = () => {
           </p>
         </div>
 
-        {/* Name (only for signup) */}
+        
         {currentState === "signup" && (
           <div className="flex items-center border rounded-lg px-3 py-2 gap-2 focus-within:ring-2 focus-within:ring-gray-300">
             <User className="text-gray-400 w-5 h-5" />
@@ -43,7 +43,7 @@ const Login = () => {
           </div>
         )}
 
-        {/* Email */}
+        
         <div className="flex items-center border rounded-lg px-3 py-2 gap-2 focus-within:ring-2 focus-within:ring-gray-300">
           <Mail className="text-gray-400 w-5 h-5" />
           <input
@@ -54,7 +54,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Password */}
+       
         <div className="flex items-center border rounded-lg px-3 py-2 gap-2 focus-within:ring-2 focus-within:ring-gray-300">
           <Lock className="text-gray-400 w-5 h-5" />
           <input
@@ -65,7 +65,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Button */}
+        
         <button
           type="submit"
           className="w-full py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition shadow-sm"
@@ -73,7 +73,7 @@ const Login = () => {
           {currentState === "login" ? "Login" : "Sign Up"}
         </button>
 
-        {/* Toggle Login/Signup */}
+        
         <p className="text-center text-sm text-gray-600">
           {currentState === "login" ? (
             <>
