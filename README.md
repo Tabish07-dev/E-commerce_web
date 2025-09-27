@@ -42,7 +42,7 @@ The site is primarily a frontend. Cart and order screens are UI-focused; to make
 
 I completed this project and I have a certificate to show the work is finished. The certificate image is included in the repository as `certificate.png` at the project root.
 
-![Project Completion Certificate](/certificate.png)
+![Certificate showing project completion for Forever e-commerce frontend. The certificate includes the text: Certificate of Completion, Forever E-commerce Frontend, awarded to [your name], and is dated with a signature at the bottom. The design uses a clean layout with blue and gold accents, conveying a formal and celebratory tone. The certificate is displayed against a neutral background.]
 
 Note: I placed the certificate under `public/` so it is served as the static asset `/certificate.png` in a Next.js app. If you prefer a different path or file name, tell me and I will update it.
 
