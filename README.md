@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+yarn dev
+Hello — I built this e-commerce frontend myself using Next.js and Tailwind CSS. I wrote this README in my own words to explain what's included, how to run the site locally, and show evidence that I completed the project.
 
-## Getting Started
+## About this project
 
-First, run the development server:
+I created a modern e-commerce frontend called "Forever". The project is built with Next.js (App Router) and Tailwind CSS. It contains a small but complete set of pages and components that let a user browse collections, view product details, add items to cart, and place orders (UI-only). This repo is the frontend only and is meant to be paired with a backend API if you want full checkout functionality.
+
+What you'll find in this repository:
+
+- `app/` — the Next.js App Router folder with pages and layouts.
+	- `app/page.js` — the home page.
+	- `app/about/page.jsx` — the About page (I added a brief completion note and certificate link here).
+	- `app/cart/page.jsx` — cart UI.
+	- `app/collection/page.jsx` — collection listing.
+	- `app/product/[id]/page.jsx` — product detail page.
+	- `app/placeorder/page.jsx` — final place-order UI.
+- `app/components/` — reusable components like `Navbar`, `Hero`, `Productitem`, `Footer`, `BestSeller`, and `LatestCollection`.
+- `app/assets/` — images and icons used across the site.
+- `public/` — static public assets. (Note: I kept the certificate file in the project root — see below.)
+
+## How I tested and used the project
+
+To run the project locally I used Node.js and npm. These are the steps I followed locally:
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open http://localhost:3000 in your browser to view the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The site is primarily a frontend. Cart and order screens are UI-focused; to make them fully functional you can connect the components to your API or a mock backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Evidence of completion (my certificate)
 
-## Learn More
+I completed this project and I have a certificate to show the work is finished. The certificate image is included in the repository as `certificate.png` at the project root.
 
-To learn more about Next.js, take a look at the following resources:
+![Project Completion Certificate](/certificate.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Note: I placed the certificate under `public/` so it is served as the static asset `/certificate.png` in a Next.js app. If you prefer a different path or file name, tell me and I will update it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Missing pages or recommended additions
 
-## Deploy on Vercel
+I checked the codebase and the main customer-facing pages are present (home, about, collection, product, cart, place order, login). If you want a full admin area, order history UX improvements, or a dedicated checkout backend, I recommend adding those — but I did not change any code for this README update.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## What I changed in this repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- I updated this `README.md` file to describe the project in my own words and embedded the project certificate image as evidence of completion.
+
+If you'd like the certificate moved to `public/` so it works with static hosting, or want me to create a short release note or deployment instructions for Vercel specifically, tell me and I will do that next.
